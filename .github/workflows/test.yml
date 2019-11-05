@@ -1,0 +1,32 @@
+name: Test
+
+on: push
+
+jobs:
+  should-fail:
+    name: Test action with wrong endings
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      # Use default path
+      - name: this action should fail
+        uses: erclu/check-crlf@master
+        continue-on-error: true
+
+      - name: previous action failed
+        if: failure()
+        run: echo "success!"
+
+  should-succeed:
+    name: Test action with correct endings
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: this action should succeed
+        uses: erclu/check-crlf@master
+        with:
+          path: ./test-files/good
