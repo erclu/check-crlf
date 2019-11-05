@@ -1,0 +1,25 @@
+name: check-crlf
+author: erclu
+description: "Checks for non-binary files with CRLF endings in given path"
+
+branding:
+  icon: file-text
+  color: gray-dark
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.path }}
+
+inputs:
+  path:
+    # XXX does it work?
+    description: Path to check
+    required: false
+    default: "."
+#
+# # TODO return number?
+# outputs:
+#   files-number:
+#     description: Number of files with CRLF endings
