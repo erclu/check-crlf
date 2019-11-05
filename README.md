@@ -29,6 +29,6 @@ jobs:
 ```
 
 <!--
-  TODO check if possible to use virtual host bash instead of docker
+  TODO check if it's possible to use the virtual host bash instead of docker
   TODO rewrite using js (better performance)
 -->

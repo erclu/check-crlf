@@ -1,4 +1,4 @@
-name: Test
+name: Test this action
 
 on: push
 
@@ -13,12 +13,10 @@ jobs:
       # Use default path
       - name: this action should fail
         uses: erclu/check-crlf@master
+        # this mapping prevents job from failing when this step fails as expected
         continue-on-error: true
 
-      - name: previous action failed
-        if: failure()
-        run: echo "success!"
-
+      # TODO how to check that previous step failed when continue-on-error is true?
   should-succeed:
     name: Test action with correct endings
     runs-on: ubuntu-latest

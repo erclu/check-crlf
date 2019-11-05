@@ -14,12 +14,11 @@ runs:
 
 inputs:
   path:
-    # XXX does it work?
     description: Path to check
     required: false
     default: "."
 #
-# # TODO return number?
+# # TODO return exact number?
 # outputs:
-#   files-number:
+#   files-found:
 #     description: Number of files with CRLF endings
