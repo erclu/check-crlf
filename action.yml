@@ -11,14 +11,14 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.path }}
+    - ${{ inputs.exclude }}
 
 inputs:
   path:
     description: Path to check
     required: false
     default: "."
-#
-# # TODO return exact number?
-# outputs:
-#   files-found:
-#     description: Number of files with CRLF endings
+  exclude:
+    description: Space-separated list of dirs to exclude
+    required: false
+    default: ""
