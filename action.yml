@@ -19,6 +19,6 @@ inputs:
     required: false
     default: "."
   exclude:
-    description: Space seperated list of dirs to exclude
+    description: Space-separated list of dirs to exclude
     required: false
     default: ""
