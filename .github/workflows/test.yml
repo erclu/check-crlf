@@ -3,28 +3,15 @@ name: Test this action
 on: push
 
 jobs:
-  should-fail:
-    name: Test action with wrong endings
+  test:
+    name: Test action
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
-      # Use default path
-      - name: this action should fail
-        uses: erclu/check-crlf@master
-        # this mapping prevents job from failing when this step fails as expected
-        continue-on-error: true
+      - name: Create test files
+        run: |
 
-      # TODO how to check that previous step failed when continue-on-error is true?
-  should-succeed:
-    name: Test action with correct endings
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v1
-
-      - name: this action should succeed
-        uses: erclu/check-crlf@master
-        with:
-          path: ./test-files/good
+      - run: |
+          sh entrypoint.sh temp "ignored"
