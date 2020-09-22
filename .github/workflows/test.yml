@@ -10,8 +10,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Create test files
-        run: |
-
       - run: |
-          sh entrypoint.sh temp "ignored"
+          sh test.sh
