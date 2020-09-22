@@ -28,7 +28,10 @@ jobs:
           path: ./a-custom-path
 ```
 
+## Contributors
+
+Most of the work was done by @Rotendahl, I mainly copy-pasted stuff from stack overflow :)
+
 <!--
-  TODO check if it's possible to use the virtual host bash instead of docker
   TODO rewrite using js (better performance)
 -->

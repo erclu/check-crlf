@@ -22,8 +22,3 @@ inputs:
     description: Space seperated list of dirs to exclude
     required: false
     default: ""
-#
-# # TODO return exact number?
-# outputs:
-#   files-found:
-#     description: Number of files with CRLF endings
