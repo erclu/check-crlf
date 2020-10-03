@@ -20,11 +20,11 @@ done
 
 if [ -z "$FILES_WITH_CRLF" ]
 then
-    echo "${BOLD_GREEN}No files with CRLF endings found.${NC}"
+    printf "${BOLD_GREEN}No files with CRLF endings found.${NC}"
     exit 0
 else
     NR_FILES=$(echo "$FILES_WITH_CRLF" | wc -l)
-    echo "${BOLD_RED}Found $NR_FILES files with CRLF endings.${NC}"
-    echo "$FILES_WITH_CRLF"
+    printf "${BOLD_RED}Found $NR_FILES files with CRLF endings.${NC}"
+    printf "$FILES_WITH_CRLF"
     exit $NR_FILES
 fi
