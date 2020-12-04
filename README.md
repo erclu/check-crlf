@@ -6,6 +6,14 @@ Uses grep on a docker container.
 
 By default checks all files in the repository (excluding the .git folder), but can be given a list of separate directories to check.
 
+## Disclaimer
+
+I don't have much time to work on this unexpectedly appreciated github action, but if you find out that your use case is complex enough to require additional features, you're probably better off using the line endings functionality included by git itself. Some references:
+
+- how to set specific line endings for each file by using gitattributes: <https://git-scm.com/docs/gitattributes#_text>
+- <https://docs.github.com/en/free-pro-team@latest/github/using-git/configuring-git-to-handle-line-endings>
+- <https://adaptivepatchwork.com/2012/03/01/mind-the-end-of-your-line/>
+
 ## Example
 
 ```yml
