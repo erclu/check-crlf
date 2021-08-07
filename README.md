@@ -1,8 +1,6 @@
 # GitHub Action to check for files with CRLF line endings
 
-GitHub Action to add to a workflow, to keep in check those windows developers who have given up understanding git's autocrlf setting and/or forget to handle line endings on their side.
-
-Uses grep on a docker container.
+A GitHub Action to keep in check those windows developers who have given up understanding git's autocrlf setting and/or forget to handle line endings on their side.
 
 By default checks all files in the repository (excluding the .git folder), but can be given a list of separate directories to check.
 

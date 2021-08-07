@@ -3,15 +3,15 @@
 
 mkdir -p "temp"
 
-printf "\r\n" > "temp/bad"
-printf "\r\n" > "temp/ignored"
-printf "\n" > "temp/good"
+printf "\r\n" >"temp/bad"
+printf "\r\n" >"temp/ignored"
+printf "\n" >"temp/good"
 
 ./entrypoint.sh . "temp/ignored"
 
 RESULT="$?"
 
-rm -r "temp"
+rm -rv "temp"
 
 # is there a better way to do this?
 [ $RESULT -eq 1 ]
