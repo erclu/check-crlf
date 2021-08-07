@@ -15,10 +15,10 @@ runs:
 
 inputs:
   path:
-    description: Path to check
+    description: Path to check, separated with "/"
     required: false
     default: "."
   exclude:
-    description: Space-separated list of dirs to exclude
+    description: Space-separated list of words to exclude
     required: false
     default: ""
