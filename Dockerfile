@@ -1,9 +1,9 @@
-FROM debian:10-slim
+FROM alpine:3
 
 COPY entrypoint.sh /
 
-RUN apt-get update \
-  && apt-get install -y file \
+RUN apk update \
+  && apk add file git bash \
   && rm -rf /var/lib/apt/lists/* \
   && chmod +x /entrypoint.sh
 
