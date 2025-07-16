@@ -1,9 +1,9 @@
-FROM alpine:3
+FROM debian:bookworm-slim
 
 COPY entrypoint.sh /
 
-RUN apk update \
-  && apk add file git bash \
+RUN apt-get update \
+  && apt-get install -y file \
   && rm -rf /var/lib/apt/lists/* \
   && chmod +x /entrypoint.sh
 
